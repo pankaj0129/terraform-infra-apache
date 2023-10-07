@@ -16,7 +16,7 @@ data "aws_ami" "ubuntu" {
 
 
 resource "aws_instance" "bastion_server" {
-    ami           = data.aws_ami.ubuntu.id
+    ami           = ami-0e77d49065decd4ac
     instance_type = var.bastion_instance_type
     subnet_id = var.bastion_subnet_id
     key_name = var.key_name
