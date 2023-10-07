@@ -12,7 +12,7 @@ variable "instance_tenancy" {
 variable "tags" {
   description = "specify name"
   type        = string
-  default     = "grafana_vpc"
+  default     = "apache_vpc"
 }
 #######################################################
 #--------public subnet ----------#
@@ -117,7 +117,7 @@ variable "key_name" {
   default     = "Ansible_key"
 }
 variable "apache_instance_type" {
-  description = "specify grafana instance type here"
+  description = "specify apache instance type here"
   type        = string
   default     = "t2-micro"
 }
