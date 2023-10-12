@@ -9,16 +9,6 @@ pipeline {
                 git branch: 'main', credentialsId: '16f3c5ca-384f-48ea-9c25-b30ca6eed9e9', url: 'https://github.com/pankaj0129/terraform-infra-apache.git'
             }
         }
-        stage('terraform migrate') {
-            when {
-                expression { params.action == "apply" || params.action == "destroy" }
-            }
-            steps {
-                dir('apache') {
-                    sh 'terraform init -migrate-state'
-                }
-            }
-        }
         stage('terraform init') {
             when {
                 expression { params.action == "apply" || params.action == "destroy" }
