@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git branch: 'main', credentialsId: '16f3c5ca-384f-48ea-9c25-b30ca6eed9e9', url: 'https://github.com/pankaj0129/terraform-infra-apache.git'
+                git branch: 'main', credentialsId: '56d0c60f-a014-4fa5-a481-acba50061e7b', url: 'https://github.com/pankaj0129/terraform-infra-apache.git'
             }
         }
         stage('terraform init') {
